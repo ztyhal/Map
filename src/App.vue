@@ -1,32 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <div class="style">地图功能展示</div>
+    <router-link to="/m2" tag="button">二维地图</router-link>
+    <router-link to="/m3" tag="button">三维地图</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
+<script>
+import Map from "./views/index.vue";
+export default {
+  name: "App",
+  components: {
+    Map,
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.style{
+  border: 1px solid blue;
   text-align: center;
-  color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.router-link-active{
+  color: blue;
 }
 </style>
